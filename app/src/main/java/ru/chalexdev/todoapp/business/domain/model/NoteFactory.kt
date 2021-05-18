@@ -3,7 +3,7 @@ package ru.chalexdev.todoapp.business.domain.model
 import ru.chalexdev.todoapp.business.domain.util.DateUtil
 import java.util.*
 
-class NoteFactory(private val dateUtil: DateUtil) {
+class NoteFactory() {
 
     fun createNote(
         id: String? = null,
@@ -14,8 +14,8 @@ class NoteFactory(private val dateUtil: DateUtil) {
             id = id ?: UUID.randomUUID().toString(),
             title = title,
             body = body ?: "",
-            createdAt = dateUtil.getCurrentTimestamp(),
-            updatedAt = dateUtil.getCurrentTimestamp(),
+            createdAt = DateUtil.getCurrentTimestamp(),
+            updatedAt = DateUtil.getCurrentTimestamp(),
         )
     }
 

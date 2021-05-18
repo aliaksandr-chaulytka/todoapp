@@ -33,6 +33,12 @@ configure<com.android.build.gradle.AppExtension> {
     }
 }
 
+android {
+    buildFeatures {
+        viewBinding = true
+    }
+}
+
 dependencies {
     implementation(Deps.Jetbrains.Kotlin.StdLib.StdLib)
     implementation(Deps.Google.AndroidMaterial.Material)
